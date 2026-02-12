@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Something Important 💌</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #ff4d6d;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #999;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <button id="yesBtn" onclick="sayYes()">Yes 💘</button>
+  <button id="noBtn" onmouseover="moveButton()">No 🙃</button>
+
+  <script>
+    function sayYes() {
+      document.body.innerHTML = "<h1>You just made me the happiest person alive ❤️🥹</h1>";
+    }
+
+    function moveButton() {
+      const button = document.getElementById("noBtn");
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
